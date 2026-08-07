@@ -1,0 +1,45 @@
+<!-- @dsCard group="Screens" viewport="1280x2000" name="Profile Page" subtitle="Editorial profile — note hero, chapters, team history" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profile Page — EdPlus P&amp;XD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<script src="../../_ds_bundle.js"></script>
+<style>
+  /* Page shell only. Everything else comes from the design system components. */
+  body { margin:0; background:var(--bg); font-family:var(--font-sans); color:var(--ink); }
+  .wrap { max-width:var(--maxw); margin:0 auto; padding:0 var(--wrap-pad); }
+  @media (max-width:680px) { .wrap { padding:0 var(--wrap-pad-sm); } }
+</style>
+</head><body>
+<div id="root"></div>
+<script type="text/babel">
+const DS = (window.EdPlusPXDDesignSystem_d81422 || window[Object.keys(window).find(function(k){return k.indexOf('EdPlusPXDDesignSystem_')===0})]);
+const { Nav, NoteHero, Chapter, TeamHistory, SiteFooter } = DS;
+
+/**
+ * Profile Page
+ * Composed entirely from design system components — this screen holds no
+ * section markup of its own. Mirrors the live page's section order.
+ * All content is placeholder; pass real copy as props at use time.
+ */
+function Page() {
+  return (
+    <>
+      <Nav />
+      <main className="wrap">
+        <NoteHero />
+        <Chapter marker="Chapter 01" />
+        <Chapter marker="Chapter 02" />
+        <Chapter marker="Chapter 03" />
+        <TeamHistory />
+      </main>
+      <SiteFooter />
+    </>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Page/>);
+</script>
+</body></html>
