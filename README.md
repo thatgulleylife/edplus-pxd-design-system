@@ -1,8 +1,36 @@
 # EdPlus P&XD Design System
 
-**EdPlus at ASU — Product & Experience Design.**
+**Arizona State University — EdPlus · Product & Experience Design.**
 Tokens, components, motion, and layout conventions for building on-brand ASU Online
 and EdPlus interfaces.
+
+## Arizona State University
+
+ASU is a comprehensive public research university in Tempe, Arizona — one of the
+largest and most innovative in the United States, built on the premise that
+excellence and access are not in tension.
+
+> *ASU is a comprehensive public research university, measured not by whom it
+> excludes, but by whom it includes and how they succeed; advancing research and
+> discovery of public value; and assuming fundamental responsibility for the
+> economic, social, cultural and overall health of the communities it serves.*
+> — the ASU Charter
+
+The charter is the design brief. Inclusion, public value, and responsibility to
+community set the bar for every interface built with this system.
+
+### ASU Online
+
+**ASU Online** delivers the full ASU degree experience to learners who can't be on
+campus — same faculty, same curriculum, same diploma. Its students are working,
+raising families, serving in the military, returning to finish what they started,
+or studying from another country. Many are the first in their family to attend
+university.
+
+**What that means for design:** the interface *is* the campus. There's no advisor
+down the hall to compensate for a confusing page. Every screen has to work on a
+phone, on a slow connection, late at night, for someone with limited time and high
+stakes. Clarity isn't a preference here — it's the product.
 
 > **This system is de-identified.** Every name, headshot, headcount, and piece of
 > narrative copy in previews and templates is a generic placeholder. Swap in real
