@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Leader Profile" description="Full leader profile page with hero, impact stats, focus grid, and team roster" -->
+<helmet>
+  <script src="./ds-base.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif; color: #1a1a1c; background: #fff; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 56px; }
+    @media(max-width:680px){ .wrap { padding: 0 24px; } }
+  </style>
+</helmet>
+
+<!-- NAV -->
+<nav style="position:sticky;top:0;z-index:30;backdrop-filter:saturate(180%) blur(18px);background:rgba(255,255,255,.82);border-bottom:1px solid #ececef">
+  <div style="max-width:1120px;margin:0 auto;padding:14px 56px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;letter-spacing:-0.01em">
+      <span style="width:11px;height:11px;border-radius:50%;background:#b01e54;display:inline-block;box-shadow:0 0 0 4px rgba(176,30,84,.12)"></span>
+      EdPlus · Product &amp; Experience Design
+    </div>
+    <a href="../portfolio/index.html" style="font-size:15px;color:#b01e54;font-weight:500">← All teams</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="position:relative;padding:80px 0 60px;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(900px 420px at 78% 12%, rgba(176,30,84,.08), transparent 65%);z-index:0;pointer-events:none"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:54px;align-items:center">
+      <div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#b01e54">{{ teamLabel }}</div>
+        <h1 style="font-size:clamp(40px,6vw,68px);line-height:1.04;letter-spacing:-0.03em;font-weight:800;margin:16px 0 10px">{{ leaderName }}</h1>
+        <div style="font-size:clamp(18px,2.4vw,22px);color:#7d7d85;font-weight:500">{{ leaderTitle }}</div>
+        <p style="font-size:18px;color:#7d7d85;line-height:1.55;margin-top:24px;max-width:520px">{{ leaderBlurb }}</p>
+        <div style="display:flex;gap:12px;margin-top:28px;flex-wrap:wrap">
+          <span style="display:inline-flex;align-items:center;gap:8px;background:#f5f5f7;border:1px solid #ececef;padding:10px 16px;border-radius:999px;font-size:14px;font-weight:500">
+            👥 <strong style="color:#b01e54">{{ teamSize }}</strong> people
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:8px;background:#f5f5f7;border:1px solid #ececef;padding:10px 16px;border-radius:999px;font-size:14px;font-weight:500">
+            🎓 <strong style="color:#b01e54">{{ asuYears }}</strong> years at ASU
+          </span>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:flex-end">
+        <div style="width:100%;max-width:380px;aspect-ratio:4/5;border-radius:26px;overflow:hidden;box-shadow:0 34px 64px -30px rgba(20,20,30,.42);background:linear-gradient(135deg,#d9b3c2,#7c1438)">
+          <img src="{{ leaderPhoto }}" alt="{{ leaderName }}" style="width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT STATS -->
+<section style="padding:64px 0">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:40px">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#b01e54;margin-bottom:12px">{{ impactEyebrow }}</div>
+      <h2 style="font-size:clamp(28px,3.4vw,40px);font-weight:800;letter-spacing:-0.03em">{{ impactTitle }}</h2>
+      <p style="color:#7d7d85;font-size:16px;margin-top:10px;max-width:560px;margin-left:auto;margin-right:auto">{{ impactSubtitle }}</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <sc-for list="{{ impactStats }}" as="stat" hint-placeholder-count="3">
+        <div style="position:relative;border-radius:22px;overflow:hidden;min-height:220px;border:1px solid #ececef;background:#2b1020">
+          <img src="{{ stat.img }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:blur(2px) brightness(.45)">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(20,10,18,.72),rgba(20,10,18,.12))"></div>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px">
+            <div style="font-size:48px;font-weight:800;letter-spacing:-0.04em;color:#fff;line-height:.9">{{ stat.stat }}</div>
+            <div style="font-size:15px;font-weight:700;color:rgba(255,255,255,.9);margin-top:8px">{{ stat.label }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- FOCUS GRID -->
+<section style="padding:64px 0;border-top:1px solid #ececef">
+  <div class="wrap">
+    <div style="margin-bottom:36px">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#b01e54;margin-bottom:12px">What we lead</div>
+      <h2 style="font-size:clamp(26px,3vw,36px);font-weight:800;letter-spacing:-0.03em">{{ focusSubtitle }}</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px">
+      <sc-for list="{{ focusAreas }}" as="area" hint-placeholder-count="4">
+        <div style="background:#fff;border:1px solid #ececef;border-radius:20px;padding:24px;transition:box-shadow .3s">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+            <div style="width:10px;height:10px;border-radius:50%;background:#b01e54;flex-shrink:0"></div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#b01e54">{{ area.key }}</div>
+          </div>
+          <h3 style="font-size:19px;font-weight:800;letter-spacing:-0.02em;margin-bottom:8px">{{ area.t }}</h3>
+          <p style="font-size:14.5px;color:#7d7d85;line-height:1.55">{{ area.d }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM ROSTER -->
+<section style="padding:64px 0 96px;border-top:1px solid #ececef">
+  <div class="wrap">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:32px;flex-wrap:wrap;gap:8px">
+      <h2 style="font-size:clamp(24px,3vw,32px);font-weight:800;letter-spacing:-0.025em">The team</h2>
+      <span style="color:#7d7d85;font-size:15px">{{ teamSize }} people</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px">
+      <sc-for list="{{ reports }}" as="report" hint-placeholder-count="4">
+        <div style="display:flex;align-items:center;gap:14px;padding:16px;border:1px solid #d7d7dd;border-radius:16px;background:#fff;box-shadow:0 2px 8px rgba(140,29,64,.05)">
+          <div style="width:52px;height:52px;border-radius:50%;flex-shrink:0;overflow:hidden;background:linear-gradient(135deg,#c9285f,#7c1438);display:grid;place-items:center">
+            <img src="{{ report.avatar }}" alt="{{ report.name }}" style="width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block">
+          </div>
+          <div>
+            <div style="font-weight:600;font-size:15px;letter-spacing:-0.01em">{{ report.name }}</div>
+            <div style="font-size:13px;color:#7d7d85;margin-top:2px;line-height:1.35">{{ report.title }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="border-top:1px solid #ececef;padding:36px 0 52px">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+    <div style="display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600">
+      <span style="width:10px;height:10px;border-radius:50%;background:#b01e54;display:inline-block"></span>
+      EdPlus · Product &amp; Experience Design
+    </div>
+    <span style="font-size:13px;color:#7d7d85">Arizona State University</span>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1280, &quot;height&quot;: 900 },
+  &quot;leaderName&quot;:     { &quot;editor&quot;: &quot;text&quot;,  &quot;default&quot;: &quot;Leader Name&quot;,  &quot;tsType&quot;: &quot;string&quot; },
+  &quot;leaderTitle&quot;:    { &quot;editor&quot;: &quot;text&quot;,  &quot;default&quot;: &quot;Role Title&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;leaderBlurb&quot;:    { &quot;editor&quot;: &quot;text&quot;,  &quot;default&quot;: &quot;One sentence on what this team does and why it matters.&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;leaderPhoto&quot;:    { &quot;editor&quot;: &quot;text&quot;,  &quot;default&quot;: &quot;../../faces/placeholders/avatar-05.svg&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;teamLabel&quot;:      { &quot;editor&quot;: &quot;text&quot;,  &quot;default&quot;: &quot;Team Name&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;teamSize&quot;:       { &quot;editor&quot;: &quot;int&quot;,   &quot;default&quot;: 10,  &quot;tsType&quot;: &quot;number&quot; },
+  &quot;asuYears&quot;:       { &quot;editor&quot;: &quot;int&quot;,   &quot;default&quot;: 5,   &quot;tsType&quot;: &quot;number&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      // Boilerplate defaults — replace every value below with real content at use time.
+      leaderName:     this.props.leaderName     ?? 'Leader Name',
+      leaderTitle:    this.props.leaderTitle    ?? 'Role Title',
+      leaderBlurb:    this.props.leaderBlurb    ?? 'One sentence on what this team does and why it matters.',
+      leaderPhoto:    this.props.leaderPhoto    ?? '../../faces/placeholders/avatar-05.svg',
+      teamLabel:      this.props.teamLabel      ?? 'Team Name',
+      teamSize:       this.props.teamSize       ?? 10,
+      asuYears:       this.props.asuYears       ?? 5,
+      impactEyebrow:  this.props.impactEyebrow  ?? 'Section Eyebrow',
+      impactTitle:    this.props.impactTitle    ?? 'Section headline goes here',
+      impactSubtitle: this.props.impactSubtitle ?? 'A short supporting line under the section headline.',
+      impactStats: this.props.impactStats ?? [
+        { stat: '000',  label: 'Metric label', img: '../../images/placeholders/stock-01.svg' },
+        { stat: '00%',  label: 'Metric label', img: '../../images/placeholders/stock-02.svg' },
+        { stat: '00K',  label: 'Metric label', img: '../../images/placeholders/stock-03.svg' },
+      ],
+      focusSubtitle: this.props.focusSubtitle ?? 'A short line introducing the focus areas below.',
+      focusAreas: this.props.focusAreas ?? [
+        { key: 'one',   t: 'Focus Area One',   d: 'One line describing this area of work.' },
+        { key: 'two',   t: 'Focus Area Two',   d: 'One line describing this area of work.' },
+        { key: 'three', t: 'Focus Area Three', d: 'One line describing this area of work.' },
+        { key: 'four',  t: 'Focus Area Four',  d: 'One line describing this area of work.' },
+        { key: 'five',  t: 'Focus Area Five',  d: 'One line describing this area of work.' },
+      ],
+      reports: this.props.reports ?? [
+        { name: 'Team Member', title: 'Role Title', avatar: '../../faces/placeholders/avatar-01.svg' },
+        { name: 'Team Member', title: 'Role Title', avatar: '../../faces/placeholders/avatar-02.svg' },
+        { name: 'Team Member', title: 'Role Title', avatar: '../../faces/placeholders/avatar-03.svg' },
+        { name: 'Team Member', title: 'Role Title', avatar: '../../faces/placeholders/avatar-04.svg' },
+        { name: 'Team Member', title: 'Role Title', avatar: '../../faces/placeholders/avatar-06.svg' },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>
