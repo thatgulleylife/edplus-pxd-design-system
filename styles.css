@@ -1,0 +1,14 @@
+/* EdPlus P&XD Design System — Global Entry Point
+   Import this single file to get all tokens + base styles.
+   Never add inline rules here — use @import only. */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&display=swap");
+
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./tokens/radius.css";
+@import "./tokens/shadows.css";
+@import "./tokens/motion.css";
+@import "./base/reset.css";
+@import "./motion/keyframes.css";

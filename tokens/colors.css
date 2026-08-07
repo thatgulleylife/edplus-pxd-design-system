@@ -1,0 +1,63 @@
+/* EdPlus P&XD — Color Tokens
+   Source: index.html :root, assets/styles.css, hub.css
+   Primary accent is #b01e54 (used in index.html) / #8c1d40 (legacy assets/styles.css).
+   Both appear in the codebase; #b01e54 is the homepage "live" value, used here. */
+
+:root {
+  /* ── Brand: Maroon ── */
+  --color-maroon:        #b01e54;   /* primary accent — buttons, links, highlights */
+  --color-maroon-deep:   #7c1438;   /* hover states, gradients, footer band */
+  --color-maroon-mid:    #c9285f;   /* gradient midpoint, hover glow */
+  --color-maroon-soft:   #fbeef3;   /* tinted backgrounds, icon wells */
+  --color-maroon-legacy: #8c1d40;   /* original brand hex — older assets/styles.css */
+
+  /* ── Brand: Gold ── */
+  --color-gold:          #e9b53a;   /* homepage gold — warmer than ASU official */
+  --color-gold-asu:      #ffc627;   /* ASU official gold — used in leader pages */
+  --color-gold-soft:     #fdf3cf;   /* gold tinted background */
+  --color-gold-ink:      #7a5a12;   /* text on gold backgrounds */
+
+  /* ── Ink / Neutrals ── */
+  --color-ink:           #1a1a1c;   /* primary text */
+  --color-ink-2:         #3a3a3c;   /* secondary text, subheadings */
+  --color-muted:         #7d7d85;   /* placeholder, captions, meta */
+  --color-line:          #ececef;   /* borders, dividers */
+  --color-line-2:        #f3f3f5;   /* subtle backgrounds, inner borders */
+  --color-bg:            #ffffff;   /* page background */
+  --color-bg-soft:       #f5f5f7;   /* card / section backgrounds */
+  --color-bg-warm:       #faf9f6;   /* warm off-white (hub.css #FAF9F6) */
+
+  /* ── Semantic accents (supporting palette) ──
+     Official ASU secondary brand colors. These are bright fills — they do NOT
+     pass WCAG AA as text on white (Green 2.29:1, Blue 2.87:1). Use the base
+     value for fills and rules only, with DARK ink on top (Green 7.60:1,
+     Blue 6.05:1). For colored text, use the `-ink` variants. */
+  --color-green:         #78BE20;   /* ASU Green — PANTONE 368 C · fills, never text */
+  --color-green-soft:    #EFF7E4;   /* tinted background */
+  --color-green-ink:     #47700F;   /* accessible text on white / soft bg (5.32:1) */
+
+  --color-blue:          #00A3E0;   /* ASU Blue — PANTONE 299 C · fills, never text */
+  --color-blue-soft:     #E0F4FB;   /* tinted background */
+  --color-blue-ink:      #00648A;   /* accessible text on white / soft bg (5.80:1) */
+
+  /* Deprecated aliases — previous teal/indigo names, remapped to the official
+     ASU colors so existing references pick up the new palette automatically. */
+  --color-teal:          var(--color-green);
+  --color-teal-soft:     var(--color-green-soft);
+  --color-indigo:        var(--color-blue);
+  --color-indigo-soft:   var(--color-blue-soft);
+  --color-rose-50:       oklch(96.9% 0.015 12.422);
+  --color-rose-100:      oklch(94.1% 0.03 12.58);
+
+  /* ── Semantic aliases ── */
+  --accent:              var(--color-maroon);
+  --accent-deep:         var(--color-maroon-deep);
+  --accent-soft:         var(--color-maroon-soft);
+  --gold:                var(--color-gold);
+  --ink:                 var(--color-ink);
+  --ink-2:               var(--color-ink-2);
+  --muted:               var(--color-muted);
+  --line:                var(--color-line);
+  --bg:                  var(--color-bg);
+  --bg-soft:             var(--color-bg-soft);
+}

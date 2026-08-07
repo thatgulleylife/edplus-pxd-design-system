@@ -1,0 +1,26 @@
+/* EdPlus P&XD — Motion Tokens
+   Easing derived from cubic-bezier values in index.html and home.js. */
+
+:root {
+  /* ── Easing curves ── */
+  --ease-spring:   cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */      /* entrance pop — snappy spring */
+  --ease-bounce:   cubic-bezier(0.34, 1.4, 0.5, 1); /* @kind other */    /* card hover — slight overshoot */
+  --ease-out:      cubic-bezier(0.2, 0.8, 0.2, 1); /* @kind other */     /* general out */
+  --ease-in-out:   cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */       /* cover-flow slide */
+  --ease-magnetic: cubic-bezier(0.2, 1.5, 0.4, 1); /* @kind other */     /* icon hover scale */
+
+  /* ── Durations ── */
+  --dur-instant:  100ms; /* @kind other */
+  --dur-fast:     200ms; /* @kind other */
+  --dur-normal:   350ms; /* @kind other */
+  --dur-slow:     550ms; /* @kind other */
+  --dur-enter:    800ms; /* @kind other */ /* scroll-reveal entrance */
+  --dur-hero:     950ms; /* @kind other */ /* headline word rise */
+  --dur-float:    6000ms; /* @kind other */ /* ambient float loop */
+
+  /* ── Transitions (shorthand) ── */
+  --transition-fast:    all var(--dur-fast) var(--ease-out); /* @kind other */
+  --transition-normal:  all var(--dur-normal) var(--ease-out); /* @kind other */
+  --transition-card:    transform 0.45s var(--ease-bounce), box-shadow 0.35s ease, border-color 0.35s ease; /* @kind other */
+  --transition-reveal:  opacity var(--dur-enter) ease, transform 1.15s var(--ease-spring); /* @kind other */
+}

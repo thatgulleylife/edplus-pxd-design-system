@@ -1,0 +1,62 @@
+/* EdPlus P&XD — Typography Tokens
+   Fonts: Plus Jakarta Sans (primary), JetBrains Mono (code)
+   Loaded from Google Fonts in consuming pages — no local font files in the repo.
+   System-stack fallback: -apple-system, "SF Pro Display", "Segoe UI", system-ui. */
+
+:root {
+  /* ── Font families ── */
+  --font-sans:  "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                "Segoe UI", system-ui, sans-serif;
+  --font-system: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-mono:  "JetBrains Mono", ui-monospace, SFMono-Regular, "Courier New", monospace;
+
+  /* ── Font weights ── */
+  --fw-regular:    400; /* @kind other */
+  --fw-medium:     500; /* @kind other */
+  --fw-semibold:   600; /* @kind other */
+  --fw-bold:       700; /* @kind other */
+  --fw-extrabold:  800; /* @kind other */
+  --fw-black:      900; /* @kind other */
+
+  /* ── Type scale (px base, fluid via clamp in components) ── */
+  --text-xs:    0.75rem;    /* 12px */
+  --text-sm:    0.875rem;   /* 14px */
+  --text-base:  1rem;       /* 16px */
+  --text-lg:    1.125rem;   /* 18px */
+  --text-xl:    1.25rem;    /* 20px */
+  --text-2xl:   1.5rem;     /* 24px */
+  --text-3xl:   1.875rem;   /* 30px */
+  --text-4xl:   2.25rem;    /* 36px */
+  --text-5xl:   3rem;       /* 48px */
+  --text-6xl:   3.75rem;    /* 60px */
+  --text-7xl:   4.5rem;     /* 72px */
+  --text-8xl:   6rem;       /* 96px */
+
+  /* ── Line heights ── */
+  --lh-none:   1; /* @kind other */
+  --lh-tight:  1.04; /* @kind other */
+  --lh-snug:   1.25; /* @kind other */
+  --lh-normal: 1.5; /* @kind other */
+  --lh-relaxed:1.6; /* @kind other */
+  --lh-loose:  1.8; /* @kind other */
+
+  /* ── Letter spacing ── */
+  --ls-tightest: -0.045em; /* @kind other */ /* hero headlines */
+  --ls-tighter:  -0.035em; /* @kind other */ /* section headings */
+  --ls-tight:    -0.025em; /* @kind other */ /* card titles */
+  --ls-normal:    0; /* @kind other */
+  --ls-wide:      0.02em; /* @kind other */
+  --ls-wider:     0.06em; /* @kind other */
+  --ls-widest:    0.14em; /* @kind other */ /* eyebrows, labels */
+  --ls-caps:      0.16em; /* @kind other */ /* all-caps labels */
+
+  /* ── Semantic type roles ── */
+  --font:        var(--font-sans);         /* primary body font */
+  --font-display:var(--font-sans);         /* display / hero font */
+}
+
+/* ── Google Fonts import hint (add to consuming page <head>) ──
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" /> */

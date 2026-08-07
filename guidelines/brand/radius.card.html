@@ -1,0 +1,27 @@
+<!-- @dsCard group="Brand" viewport="700x150" name="Radius & Borders" subtitle="Corner radii across component types" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #fff; font-family: var(--font-sans); padding: 20px 24px; }
+  .row { display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .box { background: #fbeef3; border: 2px solid #b01e54; display: flex; align-items: center; justify-content: center; }
+  .label { font-size: 10px; color: #7d7d85; text-align: center; font-weight: 600; }
+  .val { font-size: 9.5px; color: #b01e54; font-weight: 700; }
+</style>
+</head><body>
+<div class="row">
+  <div class="item"><div class="box" style="width:40px;height:40px;border-radius:8px"></div><div class="label">sm</div><div class="val">8px</div></div>
+  <div class="item"><div class="box" style="width:48px;height:40px;border-radius:14px"></div><div class="label">md</div><div class="val">14px</div></div>
+  <div class="item"><div class="box" style="width:56px;height:48px;border-radius:20px"></div><div class="label">lg</div><div class="val">20px</div></div>
+  <div class="item"><div class="box" style="width:64px;height:52px;border-radius:22px"></div><div class="label">card</div><div class="val">22px</div></div>
+  <div class="item"><div class="box" style="width:68px;height:56px;border-radius:24px"></div><div class="label">xl</div><div class="val">24px</div></div>
+  <div class="item"><div class="box" style="width:72px;height:60px;border-radius:28px"></div><div class="label">2xl</div><div class="val">28px</div></div>
+  <div class="item"><div class="box" style="width:76px;height:64px;border-radius:30px"></div><div class="label">3xl</div><div class="val">30px</div></div>
+  <div class="item"><div class="box" style="width:80px;height:40px;border-radius:999px"></div><div class="label">pill</div><div class="val">999px</div></div>
+  <div class="item"><div class="box" style="width:48px;height:48px;border-radius:50%"></div><div class="label">circle</div><div class="val">50%</div></div>
+</div>
+</body></html>

@@ -1,0 +1,51 @@
+<!-- @dsCard group="Brand" viewport="700x180" name="Motion & Easing" subtitle="Spring entrance, bounce hover, ambient float" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #fff; font-family: var(--font-sans); padding: 18px 24px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .item { border: 1px solid #ececef; border-radius: 12px; padding: 14px; }
+  .name { font-size: 12px; font-weight: 800; color: #1a1a1c; margin-bottom: 4px; }
+  .curve { font-size: 10px; color: #7d7d85; font-family: "JetBrains Mono", monospace; margin-bottom: 8px; }
+  .usage { font-size: 11px; color: #3a3a3c; }
+  .demo { width: 100%; height: 4px; background: #fbeef3; border-radius: 2px; margin-top: 10px; position: relative; overflow: hidden; }
+  .demo::after { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 50%; background: #b01e54; border-radius: 2px; animation: slide 2s infinite; }
+  @keyframes slide { 0% { left: 0; } 50% { left: 50%; } 100% { left: 0; } }
+</style>
+</head><body>
+<div class="grid">
+  <div class="item">
+    <div class="name">Spring</div>
+    <div class="curve">(.16, 1, .3, 1)</div>
+    <div class="usage">Scroll reveals, card entrances, modal open. Snappy, confident.</div>
+  </div>
+  <div class="item">
+    <div class="name">Bounce</div>
+    <div class="curve">(.34, 1.4, .5, 1)</div>
+    <div class="usage">Card hover lift. Slight overshoot gives tactile feel.</div>
+  </div>
+  <div class="item">
+    <div class="name">Ease Out</div>
+    <div class="curve">(.2, .8, .2, 1)</div>
+    <div class="usage">Icon scales, general UI transitions.</div>
+  </div>
+  <div class="item">
+    <div class="name">Cover-flow</div>
+    <div class="curve">(.4, 0, .2, 1)</div>
+    <div class="usage">Portfolio slide transitions, carousel slides.</div>
+  </div>
+  <div class="item">
+    <div class="name">Magnetic</div>
+    <div class="curve">(.2, 1.5, .4, 1)</div>
+    <div class="usage">Team box icon hover scale — maximum overshoot.</div>
+  </div>
+  <div class="item">
+    <div class="name">Float</div>
+    <div class="curve">ease-in-out 6s ∞</div>
+    <div class="usage">Constellation node ambient float. Decorative only.</div>
+  </div>
+</div>
+</body></html>

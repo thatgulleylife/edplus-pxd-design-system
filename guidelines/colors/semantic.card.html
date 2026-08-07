@@ -1,0 +1,47 @@
+<!-- @dsCard group="Colors" viewport="700x200" name="Semantic & Supporting" subtitle="ASU Green, ASU Blue, and contextual accent pairings" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: #fff; font-family: var(--font-sans); }
+  .grid { display: flex; gap: 12px; padding: 16px; }
+  .pair { display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .chip { height: 48px; border-radius: 10px; display: flex; align-items: center; padding: 0 14px; font-size: 12px; font-weight: 700; }
+  .soft { height: 32px; border-radius: 8px; display: flex; align-items: center; padding: 0 12px; font-size: 11px; font-weight: 600; }
+  .label { font-size: 10.5px; color: #7d7d85; text-align: center; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+</style>
+</head><body>
+<div class="grid">
+  <div class="pair">
+    <div class="chip" style="background:#b01e54;color:#fff">Maroon #b01e54</div>
+    <div class="soft" style="background:#fbeef3;color:#b01e54">Soft bg #fbeef3</div>
+    <div class="label">Primary</div>
+  </div>
+  <div class="pair">
+    <div class="chip" style="background:#e9b53a;color:#7a5a12">Gold #e9b53a</div>
+    <div class="soft" style="background:#fdf3cf;color:#7a5a12">Soft bg #fdf3cf</div>
+    <div class="label">Gold</div>
+  </div>
+  <div class="pair">
+    <div class="chip" style="background:#78BE20;color:#1a1a1c">ASU Green #78BE20</div>
+    <div class="soft" style="background:#EFF7E4;color:#47700F">Ink #47700F</div>
+    <div class="label">ASU Green</div>
+  </div>
+  <div class="pair">
+    <div class="chip" style="background:#00A3E0;color:#1a1a1c">ASU Blue #00A3E0</div>
+    <div class="soft" style="background:#E0F4FB;color:#00648A">Ink #00648A</div>
+    <div class="label">ASU Blue</div>
+  </div>
+  <div class="pair">
+    <div class="chip" style="background:linear-gradient(135deg,#c9285f,#7c1438);color:#fff">Gradient</div>
+    <div class="soft" style="background:linear-gradient(135deg,#fdf3cf,#ffe9a8);color:#6b4e00;border:1px solid #f1d488">Alumni gold</div>
+    <div class="label">Gradients</div>
+  </div>
+</div>
+<p style="margin:0;padding:2px 16px 14px;font-size:11.5px;line-height:1.55;color:#7d7d85;font-family:var(--font-sans)">
+  <strong style="color:#3a3a3c">Contrast:</strong> ASU Green and ASU Blue are bright fills — neither
+  passes WCAG AA as text on white (2.29:1 / 2.87:1). Use them as fills with <strong style="color:#3a3a3c">dark
+  ink on top</strong> (7.60:1 / 6.05:1); when the color must carry text, use
+  <code>--color-green-ink</code> / <code>--color-blue-ink</code>.
+</p>
+</body></html>

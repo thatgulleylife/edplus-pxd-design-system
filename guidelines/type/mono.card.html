@@ -1,0 +1,31 @@
+<!-- @dsCard group="Type" viewport="700x140" name="Mono & Code" subtitle="JetBrains Mono for technical labels and code" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: #fff; font-family: var(--font-sans); padding: 18px 24px; }
+  .row { display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-start; }
+  .block { }
+  .tag { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b01e54; margin-bottom: 6px; }
+  .code-chip { font-family: "JetBrains Mono", monospace; font-size: 12px; background: #f5f5f7; border: 1px solid #ececef; padding: 3px 8px; border-radius: 5px; color: #3a3a3c; }
+  .code-block { font-family: "JetBrains Mono", monospace; font-size: 12.5px; line-height: 1.7; color: #3a3a3c; background: #f5f5f7; padding: 10px 14px; border-radius: 8px; border-left: 3px solid #b01e54; }
+</style>
+</head><body>
+<div class="row">
+  <div class="block">
+    <div class="tag">Token reference</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <span class="code-chip">--color-maroon</span>
+      <span class="code-chip">--font-sans</span>
+      <span class="code-chip">--radius-card</span>
+      <span class="code-chip">--shadow-hover</span>
+    </div>
+  </div>
+  <div class="block">
+    <div class="tag">Usage example</div>
+    <div class="code-block">background: var(--accent);<br>border-radius: var(--radius);<br>font-family: var(--font-sans);</div>
+  </div>
+</div>
+</body></html>

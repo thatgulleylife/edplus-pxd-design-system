@@ -1,0 +1,21 @@
+/* EdPlus P&XD — Shadow Tokens
+   Shadows lean maroon — hover states tint with accent color. */
+
+:root {
+  --shadow-xs:   0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm:   0 2px 8px rgba(140, 29, 64, 0.05);
+  --shadow-md:   0 10px 40px rgba(0, 0, 0, 0.08);
+  --shadow-lg:   0 20px 60px rgba(140, 29, 64, 0.18);
+  --shadow-xl:   0 34px 64px -30px rgba(20, 20, 30, 0.42);
+  --shadow-2xl:  0 60px 120px -34px rgba(60, 10, 30, 0.55);
+
+  /* ── Semantic ── */
+  --shadow:           var(--shadow-md);
+  --shadow-hover:     var(--shadow-lg);
+  --shadow-card:      var(--shadow-xl);
+  --shadow-modal:     var(--shadow-2xl);
+
+  /* ── Maroon-tinted hover shadow (used on leader cards) ── */
+  --shadow-maroon-hover: 0 38px 64px -26px rgba(20, 20, 30, 0.44);
+  --shadow-avatar:       0 16px 30px -14px rgba(20, 20, 30, 0.42);
+}

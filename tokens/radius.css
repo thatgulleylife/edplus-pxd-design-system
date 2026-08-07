@@ -1,0 +1,16 @@
+/* EdPlus P&XD — Border Radius Tokens */
+
+:root {
+  --radius-sm:   8px;     /* small chips, tags */
+  --radius-md:   14px;    /* deck-cards, small components */
+  --radius-lg:   20px;    /* team boxes, leader cards */
+  --radius-xl:   24px;    /* bento cards */
+  --radius-2xl:  28px;    /* modals */
+  --radius-3xl:  30px;    /* mission block */
+  --radius-card: 22px;    /* standard card (index.html --radius) */
+  --radius-pill: 999px;   /* pills, buttons, tags */
+  --radius-circle: 50%;   /* avatars */
+
+  /* ── Semantic aliases ── */
+  --radius: var(--radius-card);
+}

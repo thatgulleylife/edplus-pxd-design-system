@@ -1,0 +1,22 @@
+<!-- @dsCard group="Components" viewport="700x120" name="Buttons" subtitle="Primary, maroon, ghost, and soft variants" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<script src="../../_ds_bundle.js"></script>
+</head><body style="margin:0;padding:24px;background:#fff;font-family:var(--font-sans);display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+<script type="text/babel">
+const { Button } = (window.EdPlusPXDDesignSystem_d81422 || window[Object.keys(window).find(function(k){return k.indexOf('EdPlusPXDDesignSystem_')===0})]);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.Fragment>
+    <Button variant="primary" icon="↓">Meet the teams</Button>
+    <Button variant="maroon" icon="→">View profile</Button>
+    <Button variant="ghost" icon="→">Learn more</Button>
+    <Button variant="soft">See all teams</Button>
+    <Button variant="primary" disabled>Disabled</Button>
+  </React.Fragment>
+);
+</script>
+<div id="root"></div>
+</body></html>

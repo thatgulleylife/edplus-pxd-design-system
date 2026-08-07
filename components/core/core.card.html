@@ -1,0 +1,41 @@
+<!-- @dsCard group="Components" viewport="700x180" name="Core: Pill · Eyebrow · Avatar" subtitle="Labels, badges, and avatar with initials fallback" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<script src="../../_ds_bundle.js"></script>
+</head><body style="margin:0;padding:20px 24px;background:#fff;font-family:var(--font-sans)">
+<script type="text/babel">
+const { Pill, Eyebrow, Avatar } = (window.EdPlusPXDDesignSystem_d81422 || window[Object.keys(window).find(function(k){return k.indexOf('EdPlusPXDDesignSystem_')===0})]);
+function Demo() {
+  return (
+    <div style={{display:'flex',flexDirection:'column',gap:16}}>
+      <div style={{display:'flex',gap:8,alignItems:'center',flexWrap:'wrap'}}>
+        <Pill>Default</Pill>
+        <Pill variant="accent">Accent</Pill>
+        <Pill variant="maroon">Maroon</Pill>
+        <Pill variant="gold">★ ASU Alumni</Pill>
+        <Pill variant="dark">Dark</Pill>
+        <Pill variant="team">12 people</Pill>
+        <Pill size="sm">Small</Pill>
+        <Pill size="lg">Large</Pill>
+      </div>
+      <div style={{display:'flex',gap:16,alignItems:'center',flexWrap:'wrap'}}>
+        <Eyebrow>EdPlus at ASU · ASU Online</Eyebrow>
+        <Eyebrow withLine={false}>No line variant</Eyebrow>
+      </div>
+      <div style={{display:'flex',gap:12,alignItems:'center'}}>
+        <Avatar src="../../faces/placeholders/avatar-01.svg" name="Alex Rivera" size={48}/>
+        <Avatar src="../../faces/placeholders/avatar-02.svg" name="Sam Okafor" size={48} ring={true}/>
+        <Avatar name="Morgan Avery" size={48}/>
+        <Avatar name="Jordan Chen" size={40}/>
+        <Avatar name="Casey Nakamura" size={36}/>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+<div id="root"></div>
+</body></html>

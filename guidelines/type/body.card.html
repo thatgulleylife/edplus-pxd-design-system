@@ -1,0 +1,34 @@
+<!-- @dsCard group="Type" viewport="700x180" name="Body & UI Text" subtitle="Body, lead, caption, and eyebrow styles" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: #fff; font-family: var(--font-sans); padding: 18px 24px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; }
+  .item { }
+  .item .role { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b01e54; margin-bottom: 5px; }
+  .eyebrow-sample { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #b01e54; display: inline-flex; align-items: center; gap: 8px; }
+  .eyebrow-sample::before { content: ""; width: 22px; height: 2px; background: #b01e54; border-radius: 2px; display: inline-block; }
+</style>
+</head><body>
+<div class="grid">
+  <div class="item">
+    <div class="role">Lead / intro</div>
+    <p style="font-size:18px;line-height:1.6;color:#7d7d85;font-weight:400;max-width:300px">We are not a traditional technology team. <strong style="color:#3a3a3c;font-weight:600">We lead with the learner.</strong></p>
+  </div>
+  <div class="item">
+    <div class="role">Body copy</div>
+    <p style="font-size:15px;line-height:1.55;color:#3a3a3c">Designs the digital experiences for students, staff, and faculty — translating user needs into intuitive, premium experiences.</p>
+  </div>
+  <div class="item">
+    <div class="role">Eyebrow label</div>
+    <span class="eyebrow-sample">EdPlus at ASU · ASU Online</span>
+  </div>
+  <div class="item">
+    <div class="role">Caption / meta</div>
+    <p style="font-size:12.5px;color:#7d7d85;letter-spacing:0.01em">Senior Director of Salesforce · 9 years at ASU</p>
+  </div>
+</div>
+</body></html>
