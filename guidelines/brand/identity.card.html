@@ -1,4 +1,4 @@
-<!-- @dsCard group="Brand" viewport="700x190" name="Brand Identity" subtitle="ASU logo lockup, nav pattern, and eyebrow" -->
+<!-- @dsCard group="Brand" viewport="700x210" name="Brand Identity" subtitle="ASU logo lockup, nav pattern, and eyebrow" -->
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
 <link rel="stylesheet" href="../../styles.css">
@@ -12,16 +12,13 @@
     background: rgba(255,255,255,.82);
     backdrop-filter: saturate(180%) blur(18px);
     border-bottom: 1px solid #ececef;
-    padding: 12px 24px;
+    padding: 14px 24px;
     display: flex; align-items: center; justify-content: space-between;
   }
   .brand { display: flex; align-items: center; gap: 14px; }
-  .asu-logo { height: 30px; width: auto; display: block; }
-  /* Optional unit descriptor, divided from the logo by a hairline rule. */
-  .unit {
-    padding-left: 14px; border-left: 1px solid #d9d9de;
-    font-size: 13px; font-weight: 600; color: #3a3a3c; letter-spacing: -0.01em;
-  }
+  /* ASU vertical lockup — 303x234 native (1.29:1). Use the resolved https
+     path; the /sites/default/ URL 301s to http and is blocked as mixed content. */
+  .asu-logo { height: 56px; width: auto; display: block; }
   .nav-links { display: flex; gap: 22px; }
   .nav-links a { font-size: 14px; font-weight: 600; color: #3a3a3c; text-decoration: none; }
   .nav-links a.active { color: #b01e54; }
@@ -40,9 +37,8 @@
 <div class="nav">
   <div class="brand">
     <img class="asu-logo"
-         src="https://cms.asuonline.asu.edu/sites/default/files/asu-horizontal-logo.png"
+         src="https://cms.asuonline.asu.edu/sites/g/files/litvpz1971/files/asu-vertical-logo.png"
          alt="Arizona State University">
-    <span class="unit">Product &amp; Experience Design</span>
   </div>
   <div class="nav-links">
     <a href="#">Teams</a>
@@ -56,10 +52,10 @@
 </div>
 
 <div class="note">
-  The <strong>ASU logo leads the header</strong> — it is the primary identifier, never replaced by a
-  unit wordmark. A sub-unit name may follow it, separated by a hairline rule, at a smaller weight.
-  Keep clear space around the logo equal to the height of the “A”, and never recolor, stretch, or
-  set it on a busy background. Logo asset: <code>asu-horizontal-logo.png</code>.
+  The <strong>ASU logo stands alone</strong> in the header — no unit name, no product wordmark
+  beside it. It is the only identifier. Keep clear space around it equal to the height of the “A”,
+  and never recolor, stretch, or set it on a busy background.
+  Logo asset: <code>asu-vertical-logo.png</code>.
 </div>
 
 </body></html>
